@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCP BOXE TETRIS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/peca.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h >UCP</h2>
+      <div id="logo-container">
+        <img src="Tetrislogo.png" alt="Logo" id="logo">
+      </div>
+      <p>Clique no botão abaixo para iniciar o jogo!</p>
+      <button onclick="window.location.href='jogo.html'">Jogar</button>
+      <h3>Criado por Davi da Trindade Alves e Leonardo Kazuo Hashimoto</h3>
+    </div>
+  
+    <!-- scripts do Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js"></script>
+    <script>
+      // Configuração do Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyDYNEco78gDJMUo_B-PsrSQrPoc5Bm6fCA",
+        authDomain: "ucptetris.firebaseapp.com",
+        projectId: "ucptetris",
+        storageBucket: "ucptetris.appspot.com",
+        messagingSenderId: "133247975489",
+        appId: "1:133247975489:web:8ca132b30afc5e56c406c0",
+        measurementId: "G-KRW120LFTS"
+      };
+  
+      // Inicializar o Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    </script>
+  </body>
+</html>

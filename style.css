@@ -1,0 +1,44 @@
+body {
+    background-color: #000000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  .container {
+    text-align: center;
+  }
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+  p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+  button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #ccc;
+  }
+  
+  #logo-container {
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+  }
+  
+  #logo {
+    width: 300px; /* Ajuste o tamanho conforme necessário */
+
+  }
+  
