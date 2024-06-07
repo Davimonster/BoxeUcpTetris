@@ -1,12 +1,13 @@
 body {
-    background-color: #000000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-  }
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #121212, #1e1e1e);
+  color: #ffffff;
+}
+
   .container {
     text-align: center;
   }

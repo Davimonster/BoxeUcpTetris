@@ -1,41 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="pt-BR">
+  <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UCP BOXE TETRIS</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="js/peca.js" defer></script>
-</head>
-<body>
-    <div class="container">
-        <h >UCP</h2>
-      <div id="logo-container">
-        <img src="Tetrislogo.png" alt="Logo" id="logo">
-      </div>
-      <p>Clique no botão abaixo para iniciar o jogo!</p>
-      <button onclick="window.location.href='jogo.html'">Jogar</button>
-      <h3>Criado por Davi da Trindade Alves e Leonardo Kazuo Hashimoto</h3>
+
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <title>Tetris</title>
+  </head>
+  <body>
+    <div id="logo-container">
+      <img src="Tetrislogo.png" alt="Logo" id="logo">
+      <button onclick="window.location.href='sobre.html'">Sobre</button>
     </div>
-  
-    <!-- scripts do Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js"></script>
-    <script>
-      // Configuração do Firebase
-      const firebaseConfig = {
-        apiKey: "AIzaSyDYNEco78gDJMUo_B-PsrSQrPoc5Bm6fCA",
-        authDomain: "ucptetris.firebaseapp.com",
-        projectId: "ucptetris",
-        storageBucket: "ucptetris.appspot.com",
-        messagingSenderId: "133247975489",
-        appId: "1:133247975489:web:8ca132b30afc5e56c406c0",
-        measurementId: "G-KRW120LFTS"
-      };
-  
-      // Inicializar o Firebase
-      firebase.initializeApp(firebaseConfig);
-      const db = firebase.firestore();
-    </script>
+
+    <div id="instrucao">
+      <img src="teclas.jpg" alt="Logo" id="instru">
+    </div>
+
+    <div class="container">
+      <div class="buttons-container">
+        <button id="start-button">Começar/Pausar</button>
+        <button id="restart-button">Restart</button>
+      </div>
+
+      <div class="content-container">
+        <div class="grid">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="filled"></div>
+          <div class="filled"></div>
+          <div class="filled"></div>
+          <div class="filled"></div>
+          <div class="filled"></div>
+          <div class="filled"></div>
+          <div class="filled"></div>
+          <div class="filled"></div>
+          <div class="filled"></div>
+          <div class="filled"></div>
+        </div>
+
+        <div class="content-right">
+          <div class="mini-grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <h3>
+            Pontução:
+            <span class="score">0</span>
+          </h3>
+        </div>
+      </div>
+
+      <div class="mobile-buttons-container">
+        <button class="left-button">
+          <span class="material-icons">arrow_back</span>
+        </button>
+
+        <button class="rotate-button">
+          <span class="material-icons">rotate_right</span>
+        </button>
+
+        <button class="right-button">
+          <span class="material-icons">arrow_forward</span>
+        </button>
+
+        <div></div>
+
+        <button class="down-button">
+          <span class="material-icons">arrow_downward</span>
+        </button>
+      </div>
+    </div>
+
+
   </body>
+  <script src="./index.js"></script>
 </html>
